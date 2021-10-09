@@ -1,2 +1,5 @@
 # Database
-Connectivity to different databases
+Connectivity to different databases.
+
+# Sql Databases:
+MySql
