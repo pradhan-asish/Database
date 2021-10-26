@@ -11,11 +11,14 @@ def createTable():
                                       database="mydb")
         
         cursor = connection.cursor()
-        cursor.execute("SELECT version();")
         
-        
-        record = cursor.fetchone()
-        print('The version',record)
+        sql = '''CREATE TABLE IF NOT EXISTS student (roll_id INT NOT NULL,
+                name Text NOT NULL,
+                class INT NOT NULL,
+                PRIMARY KEY (roll_id))'''
+        cursor.execute(sql)
+        print('Table created sucessully')
+        connection.commit()
         connection.close()
         
     except (Exception, Error) as error:
