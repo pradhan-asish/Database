@@ -14,9 +14,11 @@ def insertStudent():
         
         sql = '''Insert into student(roll_id,name,class) Values(1,'Asish',10)'''
         cursor.execute(sql)
-        
+        print('Data inserteed succefully')
+        connection.commit()
+        connection.close()
     
     except (Exception, Error) as error:
         print("Error while creating the table", error)
         
-        
+insertStudent()
