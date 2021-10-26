@@ -11,9 +11,9 @@ def createTable():
                                       database="mydb")
         
         cursor = connection.cursor()
-        
-        
         cursor.execute("SELECT version();")
+        
+        
         record = cursor.fetchone()
         print('The version',record)
         connection.close()
