@@ -1,16 +1,20 @@
+import psycopg2
 from psycopg2 import Error
-import Connections as conn
 
 def createTable():
     
     try:
-        connection = conn.openConnection()
+        connection = psycopg2.connect(user="postgres",
+                                      password="Pradhan@1994",
+                                      host="127.0.0.1",
+                                      port="5432",
+                                      database="mydb")
+        
         cursor = connection.cursor()
         
         
         cursor.execute("SELECT version();")
-        
-        conn.openConnection(connection)
+        connection.close()
         
     except (Exception, Error) as error:
         print("Error while creating the table", error)
