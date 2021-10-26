@@ -22,9 +22,8 @@ def openConnection():
     
 def closeConnection(conn):
     try:
-        
+        conn.close()
         
     except (Exception, Error) as error:
-        print("Error while connecting to PostgreSQL", error)
-    finally:
-        return cursor
+        print("Error while closing the connection to PostgreSQL", error)
+    
