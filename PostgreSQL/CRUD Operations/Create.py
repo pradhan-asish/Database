@@ -14,6 +14,8 @@ def createTable():
         
         
         cursor.execute("SELECT version();")
+        record = cursor.fetchone()
+        print('The version',record)
         connection.close()
         
     except (Exception, Error) as error:
