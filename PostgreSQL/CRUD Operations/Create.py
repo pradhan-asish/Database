@@ -24,4 +24,5 @@ def createTable():
     except (Exception, Error) as error:
         print("Error while creating the table", error)
         
+
 createTable()
