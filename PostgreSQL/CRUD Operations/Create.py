@@ -5,9 +5,9 @@ import Connections as conn
 def createTable():
     
     try:
-        connections = conn.openConnection()
+        connection = conn.openConnection()
         cursor = connection.cursor()
-        conn.openConnection(connections)
+        conn.openConnection(connection)
         
     except (Exception, Error) as error:
-        print("Error while closing the connection to PostgreSQL", error)
+        print("Error while creating the table", error)
