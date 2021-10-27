@@ -14,11 +14,17 @@ def readData():
         cursor.execute(sql)
         record = cursor.fetchall()
         print('Read all records:',record)
-        
+        cursor.close()
         connection.close()
         
     except (Exception, Error) as error:
         print("Error while fetching the data", error)
+    finally:
+        # closing database connection.
+        if connection:
+            cursor.close()
+            connection.close()
+            print("PostgreSQL connection is closed")    
         
 def readDataById(id):
     try:
@@ -33,11 +39,19 @@ def readDataById(id):
         ar.append(id)
         cursor.execute(sql,ar)
         record = cursor.fetchall()
+        cursor.close()
         print('Read only one record:',record)       
         connection.close()
         
     except (Exception, Error) as error:
         print("Error while fetching the data", error)
+    
+    finally:
+        # closing database connection.
+        if connection:
+            cursor.close()
+            connection.close()
+            print("PostgreSQL connection is closed")
         
 readData()
 readDataById(1)
