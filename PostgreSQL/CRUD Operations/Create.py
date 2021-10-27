@@ -23,6 +23,11 @@ def createTable():
         
     except (Exception, Error) as error:
         print("Error while creating the table", error)
-        
+    finally:
+        # closing database connection.
+        if connection:
+            cursor.close()
+            connection.close()
+            print("PostgreSQL connection is closed")    
 
 createTable()
