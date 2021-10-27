@@ -20,5 +20,4 @@ def readData():
     except (Exception, Error) as error:
         print("Error while fetching the data", error)
 
-     
 readData()
