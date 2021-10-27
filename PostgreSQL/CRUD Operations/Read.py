@@ -33,8 +33,7 @@ def readDataById(id):
         ar.append(id)
         cursor.execute(sql,ar)
         record = cursor.fetchall()
-        print('Read only first record:',record)
-        
+        print('Read only one record:',record)       
         connection.close()
         
     except (Exception, Error) as error:
