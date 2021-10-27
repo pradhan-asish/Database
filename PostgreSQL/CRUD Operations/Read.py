@@ -9,4 +9,16 @@ def readData():
                                       host="127.0.0.1",
                                       port="5432",
                                       database="mydb")
+        cursor = connection.cursor()
+        sql = '''Select * from Student'''
+        cursor.execute(sql)
+        record = cursor.fetchall()
+        print(record)
         
+        connection.close()
+        
+    except (Exception, Error) as error:
+        print("Error while fetching the data", error)
+
+     
+readData()
