@@ -24,5 +24,11 @@ def insertStudent(id,name,clas):
     
     except (Exception, Error) as error:
         print("Error while creating the table", error)
-        
-insertStudent(2,'An',5)
+    finally:
+        # closing database connection.
+        if connection:
+            cursor.close()
+            connection.close()
+            print("PostgreSQL connection is closed")
+            
+insertStudent(3,'Deepak',5)
