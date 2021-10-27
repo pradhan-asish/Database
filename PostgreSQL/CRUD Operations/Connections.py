@@ -20,7 +20,7 @@ def openConnection():
     finally:
         return connection
     
-def closeConnection(DataDownloadUtilities.DataDownloadCollection):
+def closeConnection(conn):
     try:
         conn.close()
         
