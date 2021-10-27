@@ -28,8 +28,10 @@ def readDataById(id):
                                       port="5432",
                                       database="mydb")
         cursor = connection.cursor()
-        sql = '''Select * from Student where id = %s'''
-        cursor.execute(sql,id)
+        sql = '''Select * from Student where roll_id = %s'''
+        ar = []
+        ar.append(id)
+        cursor.execute(sql,ar)
         record = cursor.fetchall()
         print(record)
         
@@ -39,3 +41,4 @@ def readDataById(id):
         print("Error while fetching the data", error)
         
 readData()
+readDataById(1)
