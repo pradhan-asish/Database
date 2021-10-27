@@ -1,7 +1,7 @@
 import psycopg2
 from psycopg2 import Error
 
-def insertStudent():
+def insertStudent(id,name,clas):
     
     try:
         connection = psycopg2.connect(user="postgres",
@@ -12,8 +12,12 @@ def insertStudent():
         
         cursor = connection.cursor()
         
-        sql = '''Insert into student(roll_id,name,class) Values(1,'Asish',10)'''
-        cursor.execute(sql)
+        sql = '''Insert into student(roll_id,name,class) Values(%s,%s,%s)'''
+        data  = []
+        data.append(id)
+        data.append(name)
+        data.append(clas)
+        cursor.execute(sql,data)
         print('Data inserteed succefully')
         connection.commit()
         connection.close()
@@ -21,4 +25,4 @@ def insertStudent():
     except (Exception, Error) as error:
         print("Error while creating the table", error)
         
-insertStudent()
+insertStudent(2,'An',5)
