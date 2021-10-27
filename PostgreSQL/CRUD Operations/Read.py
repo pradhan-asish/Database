@@ -13,7 +13,7 @@ def readData():
         sql = '''Select * from Student'''
         cursor.execute(sql)
         record = cursor.fetchall()
-        print(record)
+        print('Read all records:',record)
         
         connection.close()
         
@@ -33,7 +33,7 @@ def readDataById(id):
         ar.append(id)
         cursor.execute(sql,ar)
         record = cursor.fetchall()
-        print(record)
+        print('Read only first record:',record)
         
         connection.close()
         
