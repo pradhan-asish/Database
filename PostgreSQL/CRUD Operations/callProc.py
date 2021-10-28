@@ -7,3 +7,5 @@ Created on Wed Oct 27 23:03:40 2021
 
 import psycopg2
 from psycopg2 import Error
+
+
