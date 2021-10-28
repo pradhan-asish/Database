@@ -17,6 +17,9 @@ def callProc(id):
                                   port="5432",
                                   database="mydb")
         
+        cur = connection.cursor()
+        sql = ''''''
+        cur.execute(sql ,[id])
         
         
         
