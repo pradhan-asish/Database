@@ -18,11 +18,11 @@ def callProc(id):
                                   database="mydb")
         
         cur = connection.cursor()
-        sql = ''''''
         cur.execute(sql ,[id])
         
+        rec = cur.fetchall()
         
-        
+        print('The result is :',rec)
         
         connection.close()
         
