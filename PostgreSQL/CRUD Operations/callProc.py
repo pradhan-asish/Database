@@ -30,3 +30,4 @@ def callProc(id):
         print("Error while connecting to PostgreSQL", error)
     finally:
         return connection
+callProc(1)
