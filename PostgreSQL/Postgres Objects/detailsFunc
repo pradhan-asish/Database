@@ -1,0 +1,11 @@
+CREATE OR REPLACE FUNCTION readStudentDetails(id integer)
+  RETURNS TABLE(rollId INTEGER, studentName VARCHAR, clas INTEGER) AS
+$$
+BEGIN
+ RETURN QUERY
+ 
+ Select roll_id,name, class from Student k where k.roll_id = id ;
+
+END; $$
+ 
+LANGUAGE plpgsql;
