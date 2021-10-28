@@ -18,7 +18,7 @@ def callProc(id):
                                   database="mydb")
         
         cur = connection.cursor()
-        cur.execute('readstudentdetails' ,[id])
+        cur.callfun('readstudentdetails' ,[id,])
         
         rec = cur.fetchall()
         
