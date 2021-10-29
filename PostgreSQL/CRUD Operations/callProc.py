@@ -19,7 +19,7 @@ def callProc(id):
         name = ''
         
         cur = connection.cursor()
-        cur.callproc('readStudentDet' ,[id,name])
+        cur.callproc('readstudentdetails' ,[id])
         
         rec = cur.fetchall()
         
