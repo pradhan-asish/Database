@@ -32,3 +32,4 @@ def callProc(id):
         return connection
     
 callProc(1)
+callProc(2)
