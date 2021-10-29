@@ -16,9 +16,10 @@ def callProc(id):
                                   host="127.0.0.1",
                                   port="5432",
                                   database="mydb")
+        name = ''
         
         cur = connection.cursor()
-        cur.callfun('readstudentdetails' ,[id,])
+        cur.callproc('readstudentdetails' ,[id,name])
         
         rec = cur.fetchall()
         
