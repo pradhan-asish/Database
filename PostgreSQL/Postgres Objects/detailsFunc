@@ -1,9 +1,24 @@
-CREATE OR REPLACE procedure readStudentDet(id IN integer, out_name OUT VARCHAR)
-AS $$
+-- FUNCTION: public.readstudentdetails(integer)
+
+-- DROP FUNCTION public.readstudentdetails(integer);
+
+CREATE OR REPLACE FUNCTION public.readstudentdetails(
+	rollid integer)
+    RETURNS TABLE(rolid integer, studentname text , clas integer) 
+    LANGUAGE 'plpgsql'
+    COST 100
+    VOLATILE PARALLEL UNSAFE
+    ROWS 1000
+
+AS $BODY$
 BEGIN
-
- Select name into out_name from Student k where k.roll_id = id ;
-
-END; $$
+ RETURN QUERY
  
-LANGUAGE plpgsql;
+ Select roll_id,name, class from Student k where k.roll_id = rollid ;
+
+END; 
+$BODY$;
+
+ALTER FUNCTION public.readstudentdetails(integer)
+    OWNER TO postgres;
+
