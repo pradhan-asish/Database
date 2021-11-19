@@ -1,11 +1,51 @@
 emp_id,emp_name,emp_age,emp_details
-121,Asish,26,
-131,Deepak,28,
-141,Shakul,29,
-151,Anu,25,
-161,Abhishek,26,
-171,Varun,28,
-181,Suhani,26,
-191,Divya,28,
-101,Satish,27,
-111,Sk,29,
+121,Asish,26,"{
+'empSalary':'1000',
+'empRank':'2',
+'empDesignation':'Data Analyst'
+}"
+131,Deepak,28,"{
+'empSalary':'1000',
+'empRank':'2',
+'empDesignation':'Data Analyst'
+}"
+141,Shakul,29,"{
+'empSalary':'1000',
+'empRank':'2',
+'empDesignation':'Data Analyst'
+}"
+151,Anu,25,"{
+'empSalary':'1000',
+'empRank':'2',
+'empDesignation':'Data Analyst'
+}"
+161,Abhishek,26,"{
+'empSalary':'1000',
+'empRank':'2',
+'empDesignation':'Data Analyst'
+}"
+171,Varun,28,"{
+'empSalary':'1000',
+'empRank':'2',
+'empDesignation':'Data Analyst'
+}"
+181,Suhani,26,"{
+'empSalary':'1000',
+'empRank':'2',
+'empDesignation':'Data Analyst'
+}"
+191,Divya,28,"{
+'empSalary':'1000',
+'empRank':'2',
+'empDesignation':'Data Analyst'
+}"
+101,Satish,27,"{
+'empSalary':'1000',
+'empRank':'2',
+'empDesignation':'Data Analyst'
+}"
+111,Sk,29,"{
+'empSalary':'1000',
+'empRank':'2',
+'empDesignation':'Data Analyst'
+}"
