@@ -1,51 +1,11 @@
 emp_id,emp_name,emp_age,emp_details
-121,Asish,26,"{
-""empSalary"":""1000"",
-""empRank"":""1"",
-""empDesignation"":""Data Analyst""
-}"
-131,Deepak,28,"{
-""empSalary"":""2000"",
-""empRank"":""2"",
-""empDesignation"":""Data Scientist""
-}"
-141,Shakul,29,"{
-""empSalary"":""8000"",
-""empRank"":""3"",
-""empDesignation"":""Data Analyst""
-}"
-151,Anu,25,"{
-""empSalary"":""7000"",
-""empRank"":""4"",
-""empDesignation"":""IT Support""
-}"
-161,Abhishek,26,"{
-""empSalary"":""10000"",
-""empRank"":""5"",
-""empDesignation"":""Web Developer""
-}"
-171,Varun,28,"{
-""empSalary"":""11000"",
-""empRank"":""6"",
-""empDesignation"":""Architect""
-}"
-181,Suhani,26,"{
-""empSalary"":""1000"",
-""empRank"":""7"",
-""empDesignation"":""Data Analyst""
-}"
-191,Divya,28,"{
-""empSalary"":""80000"",
-""empRank"":""8"",
-""empDesignation"":""Data Analyst""
-}"
-101,Satish,27,"{
-""empSalary"":""10090"",
-""empRank"":""9"",
-""empDesignation"":""Tech Lead""
-}"
-111,Sk,29,"{
-""empSalary"":""77000"",
-""empRank"":""10"",
-""empDesignation"":""Tester""
-}"
+121,Asish,26,"{""empSalary"":""1000"",""empRank"":""1"",""empDesignation"":""Data Analyst""}"
+131,Deepak,28,"{""empSalary"":""2000"",""empRank"":""2"",""empDesignation"":""Data Scientist""}"
+141,Shakul,29,"{""empSalary"":""8000"",""empRank"":""3"",""empDesignation"":""Data Analyst""}"
+151,Anu,25,"{""empSalary"":""7000"",""empRank"":""4"",""empDesignation"":""IT Support""}"
+161,Abhishek,26,"{""empSalary"":""10000"",""empRank"":""5"",""empDesignation"":""Web Developer""}"
+171,Varun,28,"{""empSalary"":""11000"",""empRank"":""6"",""empDesignation"":""Architect""}"
+181,Suhani,26,"{""empSalary"":""1000"",""empRank"":""7"",""empDesignation"":""Data Analyst""}"
+191,Divya,28,"{""empSalary"":""80000"",""empRank"":""8"",""empDesignation"":""Data Analyst""}"
+101,Satish,27,"{""empSalary"":""10090"",""empRank"":""9"",""empDesignation"":""Tech Lead""}"
+111,Sk,29,"{""empSalary"":""77000"",""empRank"":""10"",""empDesignation"":""Tester""}"
