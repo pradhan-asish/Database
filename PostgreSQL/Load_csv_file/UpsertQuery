@@ -19,6 +19,7 @@ DO
 UPDATE 
 SET
 emp_Details =  case when employee_details.emp_details IS NULL THEN '{}' ELSE employee_details.emp_details END :: JSONB || 
-				jsonb_build_object('empNo','101','empName','Asish' );
+				jsonb_build_object('empNo','101','empName','Asish' )
+returning xmax;
 
 Select * from public.employee_details where emp_id = '108' ;
