@@ -1,0 +1,25 @@
+Update public.employee_details set emp_details  = jsonb_set(emp_details::jsonb,'{empDesignation}','"Developer"')
+where 
+emp_id = 111 ;
+
+Update public.employee_details 
+set emp_details  = emp_details::jsonb ||  jsonb_build_object('empSalary','1212121')
+where 
+emp_id = 111 ;
+
+SELECT * FROM public.employee_details where emp_id = 111 
+ORDER BY emp_id ASC ;emp_name
+
+{"empSalary":"10090","empRank":"9","empDesignation":"Tech Lead"}
+
+INSERT INTO public.employee_details(emp_id , emp_name , emp_age )
+VALUES('1108','Asish','26')
+ON CONFLICT(emp_id)
+DO
+UPDATE 
+SET
+emp_Details =  case when employee_details.emp_details IS NULL THEN '{}' ELSE employee_details.emp_details END :: JSONB || 
+				jsonb_build_object('empNo','101','empName','Asish' )
+returning xmax;
+
+Select * from public.employee_details where emp_id = '108' ;
